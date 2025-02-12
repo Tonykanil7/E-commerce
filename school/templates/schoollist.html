@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="text-center text-secondary">SCHOOL LIST</h1>
+
+<div class="container border bordered-3 border-dark w-50 p-5 mt-3">
+    <div class="mx-auto">
+        {% for i in school %}
+    <ol type="1">
+        <li><a href="{% url 'details' i.id %}">{{i.name}}</a></li>
+    </ol>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}

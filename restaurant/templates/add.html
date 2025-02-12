@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<div class="container border bordered-1 w-50 mt-5 p-5">
+<form method="post">
+    {% csrf_token %}
+{{form}}
+    <input class="btn btn-danger d-block mx-auto" type="submit">
+    </form>
+    </div>
+{% endblock %}
+</body>
+</html>

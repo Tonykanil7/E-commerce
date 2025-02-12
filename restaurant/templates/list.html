@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<h1 class="text-center mb-5 mt-2">ITEMS</h1>
+<ul class="list-group w-50">
+  {% for i in m %}
+  <li class="list-group-item fw-bold fs-4">{{i.name}}</li>
+  {% for x in i.items.all %}
+  <li class="list-group-item">{{x.name}}</li>
+  {% endfor %}
+    {% endfor %}
+</ul>
+{% endblock %}
+</body>
+</html>
